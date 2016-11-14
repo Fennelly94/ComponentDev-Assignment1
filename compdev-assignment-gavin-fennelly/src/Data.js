@@ -17,9 +17,9 @@
                 "age": 2, 
                 "carrier": "AT&amp;T", 
                 "id": "motorola-atrix-4g", 
-                "imageUrl": "motorola-atrix-4g.0.jpg", 
-                "name": "MOTOROLA ATRIX\u2122 4G", 
-                "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone."
+                "imageUrl": "gareth-bale.jpg", 
+                "name": "Gareth Bale", 
+                "snippet": "Gareth Bale play as right winger for Real Madrid and cost them 100 million in 2014 which made him the most expensive player in the world. He has also be nominated as Wales player of the year for the last four years in a row"
             }, 
             {
                 "age": 3, 
@@ -79,9 +79,9 @@
                 "age": 10, 
                 "carrier": "Verizon", 
                 "id": "droid-2-global-by-motorola", 
-                "imageUrl": "droid-2-global-by-motorola.0.jpg", 
-                "name": "DROID\u2122 2 Global by Motorola", 
-                "snippet": "The first smartphone with a 1.2 GHz processor and global capabilities."
+                "imageUrl": "toni-kroos.jpg", 
+                "name": "Toni Kroos", 
+                "snippet": "Toni Kroos plays as a central defensive midfilder for Real Madrid and also plays for Germany in the same position. He signed for Madrid in 2014 and has been in the starting eleven ever since playing a big part in Madrids success."
             }, 
             {
                 "age": 11, 

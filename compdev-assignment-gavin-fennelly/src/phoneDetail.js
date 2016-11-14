@@ -18,38 +18,25 @@
               <div>
                  <ul className="specs">
                   <li >
-                    <span>Age:</span>
+                   <h4> <span><u><b>Age:</b></u></span></h4>
                     <dl>
-                      <dt>age</dt>
+                     
                          {age}
                     </dl>
                   </li>
+				  
                   <li>
-                    <span>Position</span>
+                    <h4><span><u><b>Position</b></u></span></h4>
                     <dl>
-                      <dt>Type</dt>
+                   
                       <dd>{phone.position.type}</dd>
                     
                     </dl>
                   </li>    
                  
+                  
                   <li>
-                    <span>Connectivity</span>
-                    <dl>
-                      <dt>Network Support</dt>
-                      <dd>{phone.connectivity.cell}</dd>
-                      <dt>WiFi</dt>
-                      <dd>{phone.connectivity.wifi}</dd>
-                      <dt>Bluetooth</dt>
-                      <dd>{phone.connectivity.bluetooth}</dd>
-                      <dt>Infrared</dt>
-                      <dd>{phone.connectivity.infrared}</dd>
-                      <dt>GPS</dt>
-                      <dd>{phone.connectivity.gps}</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <span>Career Goals</span>
+                    <h4><span><u><b>Career Goals</b></u></span></h4>
                     <dl>
                       <dt>Real Madrid Goals</dt>
                       <dd>{phone.goals.realmadridgoals}</dd>
@@ -58,50 +45,17 @@
                     </dl>
                   </li>
                   <li>
-                    <span>Height and Weight</span>
+                    <h4><span><u><b>Height and Weight</b></u></span></h4>
                     <dl>
-                      <dt>Sizes:</dt>
+                    
                           {dimensions}
                     
                     </dl>
                   </li>    
+                 
+                  
                   <li>
-                    <span>Display</span>
-                    <dl>
-                      <dt>Screen size</dt>
-                      <dd>{phone.display.screenSize}</dd>
-                      <dt>Screen resolution</dt>
-                      <dd>{phone.display.screenResolution}</dd>
-                      <dt>Touch screen</dt>
-                      <dd>{phone.display.touchScreen}</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <span>Hardware</span>
-                    <dl>
-                      <dt>CPU</dt>
-                      <dd>{phone.hardware.cpu}</dd>
-                      <dt>USB</dt>
-                      <dd>{phone.hardware.usb}</dd>
-                      <dt>Audio / headphone jack</dt>
-                      <dd>{phone.hardware.audioJack}</dd>
-                      <dt>FM Radio</dt>
-                      <dd>{phone.hardware.fmRadio}</dd>
-                      <dt>Accelerometer</dt>
-                      <dd>{phone.hardware.accelerometer}</dd>
-                    </dl>
-                  </li>    
-                  <li>
-                    <span>Camera</span>
-                    <dl>
-                      <dt>Primary</dt>
-                      <dd>{phone.camera.primary}</dd>
-                      <dt>Features</dt>
-                      <dd>{phone.camera.features.join(', ')}</dd>
-                    </dl>
-                  </li>
-                  <li>
-                    <span><b>Nationality</b></span>
+                    <h4><span><u><b>Nationality</b></u></span></h4>
                     <dd>{phone.nationality}</dd>
                   </li>              
                   </ul>            

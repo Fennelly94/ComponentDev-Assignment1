@@ -20,7 +20,7 @@
 		  
 		  
                 <div className="col-md-10">
-				<p><b>Enter a players name here: </b></p>
+				<p><b><u>Enter a players name here: </u></b></p>
                <input type="text" placeholder="Type here to search..." 
                           value={this.props.filterText}
                           onChange={this.handleTextChange} />

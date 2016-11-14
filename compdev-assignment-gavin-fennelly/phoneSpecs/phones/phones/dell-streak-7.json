@@ -12,34 +12,17 @@
         "talkTime": "", 
         "type": "Left Wingers"
     }, 
-    "camera": {
-        "features": [
-            "Flash", 
-            "Video"
-        ], 
-        "primary": "5.0 megapixels"
-    }, 
-    "connectivity": {
-        "bluetooth": "Bluetooth 2.1", 
-        "cell": "T-mobile HSPA+ @ 2100/1900/AWS/850 MHz", 
-        "gps": true, 
-        "infrared": false, 
-        "wifi": "802.11 b/g"
-    }, 
+   
+   
     "description": "Ronaldo lad information, some baller tbh", 
+	
     "display": {
         "screenResolution": "WVGA (800 x 480)", 
         "screenSize": "7.0 inches", 
         "touchScreen": true
     }, 
-    "hardware": {
-        "accelerometer": true, 
-        "audioJack": "3.5mm", 
-        "cpu": "nVidia Tegra T20", 
-        "fmRadio": false, 
-        "physicalKeyboard": false, 
-        "usb": "USB 2.0"
-    }, 
+    
+    
     "id": "dell-streak-7", 
     "images": [
         "img/phones/dell-streak-7.0.jpg", 
