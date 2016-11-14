@@ -32,15 +32,7 @@
                     
                     </dl>
                   </li>    
-                  <li>
-                    <span>Storage and Memory</span>
-                    <dl>
-                      <dt>RAM</dt>
-                      <dd>{phone.storage.ram}</dd>
-                      <dt>Internal Storage</dt>
-                      <dd>{phone.storage.flash}</dd>
-                    </dl>
-                  </li>
+                 
                   <li>
                     <span>Connectivity</span>
                     <dl>
@@ -57,21 +49,20 @@
                     </dl>
                   </li>
                   <li>
-                    <span>Android</span>
+                    <span>Career Goals</span>
                     <dl>
-                      <dt>OS Version</dt>
-                      <dd>{phone.android.os}</dd>
-                      <dt>UI</dt>
-                      <dd>{phone.android.ui}</dd>
+                      <dt>Real Madrid Goals</dt>
+                      <dd>{phone.goals.realmadridgoals}</dd>
+                      <dt>International Goals</dt>
+                      <dd>{phone.goals.internationalgoals}</dd>
                     </dl>
                   </li>
                   <li>
-                    <span>Size and Weight</span>
+                    <span>Height and Weight</span>
                     <dl>
-                      <dt>Dimensions</dt>
+                      <dt>Sizes:</dt>
                           {dimensions}
-                       <dt>Weight</dt>
-                      <dd>{phone.sizeAndWeight.weight}</dd>
+                    
                     </dl>
                   </li>    
                   <li>
@@ -110,8 +101,8 @@
                     </dl>
                   </li>
                   <li>
-                    <span>Additional Features</span>
-                    <dd>{phone.additionalFeatures}</dd>
+                    <span><b>Nationality</b></span>
+                    <dd>{phone.nationality}</dd>
                   </li>              
                   </ul>            
             </div>

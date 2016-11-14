@@ -1,8 +1,8 @@
 {
-    "additionalFeatures": "Front Facing 1.3MP Camera", 
-    "android": {
-        "os": "Android 2.2", 
-        "ui": "Dell Stage"
+    "nationality": "Portugese", 
+    "goals": {
+        "realmadridgoals": "266", 
+        "internationalgoals": "66"
     }, 
     "age": [
         "31"
@@ -51,9 +51,9 @@
     "name": "Cristiano Ronaldo", 
     "sizeAndWeight": {
         "dimensions": [
-            "199.9 mm (w)", 
-            "119.8 mm (h)", 
-            "12.4 mm (d)"
+            "Weight: 88kg", 
+            "Height: 6ft 1inchs" 
+            
         ], 
         "weight": "450.0 grams"
     }, 
