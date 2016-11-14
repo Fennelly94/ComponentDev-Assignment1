@@ -1,0 +1,110 @@
+    import React from 'react';
+	import _ from 'lodash';
+	{/* import './App.css' */}
+	import Phones from  './Data';
+	import { Link } from 'react-router'; 
+
+  var SelectBox = React.createClass({
+      handleChange : function(e, type,value) {
+           e.preventDefault();
+           this.props.onUserInput( type,value);
+      },
+      handleTextChange : function(e) {
+          this.handleChange( e, 'search', e.target.value);
+      },
+      handleSortChange : function(e) {
+          this.handleChange(e, 'sort', e.target.value);
+      },
+      render: function(){
+          return (
+		  
+		  
+                <div className="col-md-10">
+				<p><b>Enter a players name here: </b></p>
+               <input type="text" placeholder="Type here to search..." 
+                          value={this.props.filterText}
+                          onChange={this.handleTextChange} />
+				 <p>              </p>
+                 <p>   Search by: </p>
+					
+                  <select id="sort" value={this.props.order } 
+                         onChange={this.handleSortChange} >
+                       <option value="name">Alphabetical</option>
+                       <option value="age">Newest</option>
+                     </select>
+             </div>
+               );
+          }
+       });
+	   
+	var Phone = React.createClass({
+		
+      render: function(){
+		  
+           return (
+		   
+                <li className="thumbnail phone-listing">
+				
+                  <Link to={'/phones/' + this.props.oneSinglePhone.id} className="thumb">
+                  
+				  <img src={"/phoneSpecs/img/images/images/phones/" + this.props.oneSinglePhone.imageUrl} alt={this.props.oneSinglePhone.name} /> </Link>
+				  
+                  <Link to={'/phones/' + this.props.oneSinglePhone.id}> {this.props.oneSinglePhone.name}</Link>
+				  
+                  <p>{this.props.oneSinglePhone.snippet}</p>
+				  
+                </li>
+               ) ;
+         }
+     }) ;
+	   
+       var FilteredPhoneList = React.createClass({
+            render: function(){
+                var displayedPhones = this.props.phones.map(function(phone) {
+                  return <Phone key={phone.id} oneSinglePhone={phone} /> ;
+                }) ;
+                return (
+                        <div className="col-md-10">
+                          <ul className="phones">
+                              {displayedPhones}
+                          </ul>
+                        </div>
+                  ) ;
+            }
+        });
+
+    var PhoneCatalogueApp = React.createClass({
+		getInitialState: function() {
+           return { search: '', sort: 'name' } ;
+      },
+      handleChange : function(type,value) {
+        if ( type === 'search' ) {
+            this.setState( { search: value } ) ;
+          } else {
+             this.setState( { sort: value } ) ;
+          }
+      }, 
+           render: function(){
+               var list = Phones.filter(function(p) {
+                      return p.name.toLowerCase().search(
+                             this.state.search.toLowerCase() ) !== -1 ;
+                        }.bind(this) );  
+               var filteredList = _.sortBy(list, this.state.sort) ;
+         return (
+              <div className="view-container">
+              <div className="view-frame">
+                 <div className="container-fluid">
+                 <div className="row">
+                    <SelectBox onUserInput={this.handleChange } 
+                           filterText={this.state.search} 
+                           sort={this.state.sort} />
+                     <FilteredPhoneList phones={filteredList} />
+                </div> 
+                </div>                   
+              </div>
+            </div>
+        );
+      }
+  });
+
+    export default PhoneCatalogueApp;
