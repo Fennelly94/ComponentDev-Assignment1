@@ -25,7 +25,7 @@
                           value={this.props.filterText}
                           onChange={this.handleTextChange} />
 				 <p>              </p>
-                 <p>   Search by: </p>
+                 <p><b><u>   Search by: </u></b></p>
 					
                   <select id="sort" value={this.props.order } 
                          onChange={this.handleSortChange} >
@@ -46,12 +46,15 @@
                 <li className="thumbnail phone-listing">
 				
                   <Link to={'/phones/' + this.props.oneSinglePhone.id} className="thumb">
+				  
+				  
+				  <h2><Link to={'/phones/' + this.props.oneSinglePhone.id}> {this.props.oneSinglePhone.name} <u><p><h4> Additionl info </h4></p></u></Link></h2>
                   
 				  <img src={"/phoneSpecs/img/images/images/phones/" + this.props.oneSinglePhone.imageUrl} alt={this.props.oneSinglePhone.name} /> </Link>
 				  
-                  <Link to={'/phones/' + this.props.oneSinglePhone.id}> {this.props.oneSinglePhone.name}</Link>
+               <u> <b> <h2> Player info: </h2></b></u>
 				  
-                  <p>{this.props.oneSinglePhone.snippet}</p>
+                 <b><p>{this.props.oneSinglePhone.snippet}</p></b>
 				  
                 </li>
                ) ;

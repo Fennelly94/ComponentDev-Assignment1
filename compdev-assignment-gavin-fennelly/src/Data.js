@@ -1,17 +1,17 @@
     var AllPhones =  [ 
             {
-                "age": 0, 
-                "id": "motorola-xoom-with-wi-fi", 
-                "imageUrl": "motorola-xoom-with-wi-fi.0.jpg", 
-                "name": "Motorola XOOM\u2122 with Wi-Fi", 
-                "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb)."
+                "age": 28, 
+                "id": "karim-benzema", 
+                "imageUrl": "karim-benzema.jpg", 
+                "name": "Karim Benzema", 
+                "snippet": "Karim Benzema is a French striker that plays for Real Madrid as a stricker up front. He has been at the club a long time and after a tough start to his career in the Spanish capital he is now a starter for the club"
             }, 
             {
-                "age": 1, 
-                "id": "motorola-xoom", 
-                "imageUrl": "motorola-xoom.0.jpg", 
-                "name": "MOTOROLA XOOM\u2122", 
-                "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+                "age": 31, 
+                "id": "modric", 
+                "imageUrl": "modric.jpg", 
+                "name": "Luka Modric", 
+                "snippet": "Luka Modric is a Croatian midfielder that plays for Madrid. He is arguably Real Madrids best player in the last two seasons. Many fans say Madrid are nothing without him and in the player in the middle that makes them tick."
             }, 
             {
                 "age": 27, 
@@ -21,9 +21,9 @@
                 "snippet": "Gareth Bale play as right winger for Real Madrid and cost them 100 million in 2014 which made him the most expensive player in the world. He has also be nominated as Wales player of the year for the last four years in a row"
             }, 
             {
-                "age": 3, 
+                "age": 31, 
                 "id": "cristiano-ronaldo", 
-                "imageUrl": "cristiano-ronaldo.jpg", 
+                "imageUrl": "ronaldo.jpg", 
                 "name": "Cristiano Ronaldo", 
                 "snippet": "Ronaldo is 3 time best player in the world and plays as a left winger for Real Madrid in the Spanish League"
             }, 
@@ -36,12 +36,11 @@
                 "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price."
             }, 
             {
-                "age": 5, 
-                "carrier": "Dell", 
-                "id": "dell-venue", 
-                "imageUrl": "dell-venue.0.jpg", 
-                "name": "Dell Venue", 
-                "snippet": "The Dell Venue; Your Personal Express Lane to Everything"
+                "age": 33, 
+                "id": "pepe", 
+                "imageUrl": "pepe.jpg", 
+                "name": "Pepe", 
+                "snippet": "Pepe is a Portuguese central defender for Real Madrid. He has made a very good partnership with Sergio Ramos over the last 5 years and has been a very good servent to Madrid, and just recently signed a new 3 year contract at the age of 33."
             }, 
             {
                 "age": 6, 
@@ -52,12 +51,11 @@
                 "snippet": "Fast just got faster with Nexus S. A pure Google experience, Nexus S is the first phone to run Gingerbread (Android 2.3), the fastest version of Android yet."
             }, 
             {
-                "age": 7, 
-                "carrier": "Cellular South", 
-                "id": "lg-axis", 
-                "imageUrl": "lg-axis.0.jpg", 
-                "name": "LG Axis", 
-                "snippet": "Android Powered, Google Maps Navigation, 5 Customizable Home Screens"
+                "age": 28, 
+                "id": "marcelo", 
+                "imageUrl": "marcelo.jpg", 
+                "name": "Marcelo", 
+                "snippet": "Marcelo is a Real Madrid left back, who has been at the club for the last 10 seasons, he signed from brazilian club Fluminense from a fee of around 2 million but is now worth a lot more and possibily the most sought after and best left back in the world."
             }, 
             {
                 "age": 8, 
@@ -75,44 +73,39 @@
                 "snippet": "The Samsung Showcase\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provides rich picture brilliance, even outdoors"
             }, 
             {
-                "age": 10, 
-                "carrier": "Verizon", 
+                "age": 26, 
                 "id": "toni-kroos", 
                 "imageUrl": "toni-kroos.jpg", 
                 "name": "Toni Kroos", 
                 "snippet": "Toni Kroos plays as a central defensive midfilder for Real Madrid and also plays for Germany in the same position. He signed for Madrid in 2014 and has been in the starting eleven ever since playing a big part in Madrids success."
             }, 
             {
-                "age": 11, 
-                "carrier": "Verizon", 
-                "id": "droid-pro-by-motorola", 
-                "imageUrl": "droid-pro-by-motorola.0.jpg", 
-                "name": "DROID\u2122 Pro by Motorola", 
-                "snippet": "The next generation of DOES."
+                "age": 30, 
+                "id": "serigo-ramos", 
+                "imageUrl": "serigo-ramos.jpg", 
+                "name": "Serigo Ramos", 
+                "snippet": "Serigo Ramos is a Spanish Defender who signed for Real Madrid as a teenager from Sevilla in 2005 and has been a start in the Madrid defense ever since."
             }, 
             {
-                "age": 12, 
-                "carrier": "AT&amp;T", 
-                "id": "motorola-bravo-with-motoblur", 
-                "imageUrl": "motorola-bravo-with-motoblur.0.jpg", 
-                "name": "MOTOROLA BRAVO\u2122 with MOTOBLUR\u2122", 
-                "snippet": "An experience to cheer about."
+                "age": 24, 
+                "id": "isco", 
+                "imageUrl": "isco.jpg", 
+                "name": "Isco", 
+                "snippet": "Isco is a Spanish midfielder that plays as an attacking midfielder for Madrid, Isco signed from Malaga a few years ago and is a fan favourite at the club and has a lot of potential."
             }, 
             {
-                "age": 13, 
-                "carrier": "T-Mobile", 
-                "id": "motorola-defy-with-motoblur", 
-                "imageUrl": "motorola-defy-with-motoblur.0.jpg", 
-                "name": "Motorola DEFY\u2122 with MOTOBLUR\u2122", 
-                "snippet": "Are you ready for everything life throws your way?"
+                "age": 25,  
+                "id": "james-rodriguez", 
+                "imageUrl": "james.jpg", 
+                "name": "James Rodriguez", 
+                "snippet": "James Rodriguez is a colombian midfielder that moved to Madrid from Monaco last year for a questionable 80million after a very impressive world cup. So far in his short Madrid career he has failed to live up to his expectations with only a few good performaces. We all know he has the talent lets hope he gets better!"
             }, 
             {
-                "age": 14, 
-                "carrier": "T-Mobile", 
-                "id": "t-mobile-mytouch-4g", 
-                "imageUrl": "t-mobile-mytouch-4g.0.jpg", 
-                "name": "T-Mobile myTouch 4G", 
-                "snippet": "The T-Mobile myTouch 4G is a premium smartphone designed to deliver blazing fast 4G speeds so that you can video chat from practically anywhere, with or without Wi-Fi."
+                "age": 29,  
+                "id": "keylor-navas", 
+                "imageUrl": "navas.jpg", 
+                "name": "Keylor Navas", 
+                "snippet": "Keylor Navas is Real Madrids first choice goalkeeper who is also a full Costa Rican international. Last year people questioned his ability and Madrid tried very hard to sign De Gea for Manchester United by this season Navas has been phenmonomal and has shut all his critics up with some amazing displays in goal."
             }, 
             {
                 "age": 15, 
@@ -145,11 +138,11 @@
                 "snippet": "The T-Mobile G2 with Google is the first smartphone built for 4G speeds on T-Mobile's new network. Get the information you need, faster than you ever thought possible."
             }, 
             {
-                "age": 19, 
-                "id": "motorola-charm-with-motoblur", 
-                "imageUrl": "motorola-charm-with-motoblur.0.jpg", 
-                "name": "Motorola CHARM\u2122 with MOTOBLUR\u2122", 
-                "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service."
+                "age": 24, 
+                "id": "casemiro", 
+                "imageUrl": "casemiro.jpg", 
+                "name": "Casemiro", 
+                "snippet": "Casemiro is a Brazilian international midfielder that plays for Real Madrid as a Defensive midfielder and is essentially the brickwall in front of the defense. He was on loan at Porto FC last year and impressed a lot and is now a regular starter for Madrid."
             }
         ] ; 
     export default AllPhones;
