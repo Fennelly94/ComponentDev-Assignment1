@@ -27,14 +27,7 @@
                 "name": "Cristiano Ronaldo", 
                 "snippet": "Ronaldo is 3 time best player in the world and plays as a left winger for Real Madrid in the Spanish League"
             }, 
-            {
-                "age": 4, 
-                "carrier": "Cellular South", 
-                "id": "samsung-gem", 
-                "imageUrl": "samsung-gem.0.jpg", 
-                "name": "Samsung Gem\u2122", 
-                "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price."
-            }, 
+           
             {
                 "age": 33, 
                 "id": "pepe", 
@@ -42,14 +35,7 @@
                 "name": "Pepe", 
                 "snippet": "Pepe is a Portuguese central defender for Real Madrid. He has made a very good partnership with Sergio Ramos over the last 5 years and has been a very good servent to Madrid, and just recently signed a new 3 year contract at the age of 33."
             }, 
-            {
-                "age": 6, 
-                "carrier": "Best Buy", 
-                "id": "nexus-s", 
-                "imageUrl": "nexus-s.0.jpg", 
-                "name": "Nexus S", 
-                "snippet": "Fast just got faster with Nexus S. A pure Google experience, Nexus S is the first phone to run Gingerbread (Android 2.3), the fastest version of Android yet."
-            }, 
+            
             {
                 "age": 28, 
                 "id": "marcelo", 
@@ -57,21 +43,8 @@
                 "name": "Marcelo", 
                 "snippet": "Marcelo is a Real Madrid left back, who has been at the club for the last 10 seasons, he signed from brazilian club Fluminense from a fee of around 2 million but is now worth a lot more and possibily the most sought after and best left back in the world."
             }, 
-            {
-                "age": 8, 
-                "id": "samsung-galaxy-tab", 
-                "imageUrl": "samsung-galaxy-tab.0.jpg", 
-                "name": "Samsung Galaxy Tab\u2122", 
-                "snippet": "Feel Free to Tab\u2122. The Samsung Galaxy Tab\u2122 brings you an ultra-mobile entertainment experience through its 7\u201d display, high-power processor and Adobe\u00ae Flash\u00ae Player compatibility."
-            }, 
-            {
-                "age": 9, 
-                "carrier": "Cellular South", 
-                "id": "samsung-showcase-a-galaxy-s-phone", 
-                "imageUrl": "samsung-showcase-a-galaxy-s-phone.0.jpg", 
-                "name": "Samsung Showcase\u2122 a Galaxy S\u2122 phone", 
-                "snippet": "The Samsung Showcase\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provides rich picture brilliance, even outdoors"
-            }, 
+           
+            
             {
                 "age": 26, 
                 "id": "toni-kroos", 
@@ -107,36 +80,7 @@
                 "name": "Keylor Navas", 
                 "snippet": "Keylor Navas is Real Madrids first choice goalkeeper who is also a full Costa Rican international. Last year people questioned his ability and Madrid tried very hard to sign De Gea for Manchester United by this season Navas has been phenmonomal and has shut all his critics up with some amazing displays in goal."
             }, 
-            {
-                "age": 15, 
-                "carrier": "US Cellular", 
-                "id": "samsung-mesmerize-a-galaxy-s-phone", 
-                "imageUrl": "samsung-mesmerize-a-galaxy-s-phone.0.jpg", 
-                "name": "Samsung Mesmerize\u2122 a Galaxy S\u2122 phone", 
-                "snippet": "The Samsung Mesmerize\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provides rich picture brilliance,even outdoors"
-            }, 
-            {
-                "age": 16, 
-                "carrier": "Sprint", 
-                "id": "sanyo-zio", 
-                "imageUrl": "sanyo-zio.0.jpg", 
-                "name": "SANYO ZIO", 
-                "snippet": "The Sanyo Zio by Kyocera is an Android smartphone with a combination of ultra-sleek styling, strong performance and unprecedented value."
-            }, 
-            {
-                "age": 17, 
-                "id": "samsung-transform", 
-                "imageUrl": "samsung-transform.0.jpg", 
-                "name": "Samsung Transform\u2122", 
-                "snippet": "The Samsung Transform\u2122 brings you a fun way to customize your Android powered touch screen phone to just the way you like it through your favorite themed \u201cSprint ID Service Pack\u201d."
-            }, 
-            {
-                "age": 18, 
-                "id": "t-mobile-g2", 
-                "imageUrl": "t-mobile-g2.0.jpg", 
-                "name": "T-Mobile G2", 
-                "snippet": "The T-Mobile G2 with Google is the first smartphone built for 4G speeds on T-Mobile's new network. Get the information you need, faster than you ever thought possible."
-            }, 
+            
             {
                 "age": 24, 
                 "id": "casemiro", 

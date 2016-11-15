@@ -30,7 +30,7 @@
                   <select id="sort" value={this.props.order } 
                          onChange={this.handleSortChange} >
                        <option value="name">Alphabetical</option>
-                       <option value="age">Newest</option>
+                       <option value="age">Youngest First</option>
                      </select>
              </div>
                );
@@ -45,26 +45,26 @@
 		   
                 <li className="thumbnail phone-listing">
 				
-                  <Link to={'/phones/' + this.props.oneSinglePhone.id} className="thumb">
+                  <Link to={'/phones/' + this.props.player.id} className="thumb">
 				  
 				  
-				  <h2><Link to={'/phones/' + this.props.oneSinglePhone.id}> {this.props.oneSinglePhone.name} <u><p><h4> Additionl info </h4></p></u></Link></h2>
+				  <h2><Link to={'/phones/' + this.props.player.id}> {this.props.player.name} <u><p><h4> Additionl info </h4></p></u></Link></h2>
                   
-				  <img src={"/phoneSpecs/img/images/images/phones/" + this.props.oneSinglePhone.imageUrl} alt={this.props.oneSinglePhone.name} /> </Link>
+				  <img src={"/phoneSpecs/img/images/images/phones/" + this.props.player.imageUrl} alt={this.props.player.name} /> </Link>
 				  
                <u> <b> <h2> Player info: </h2></b></u>
 				  
-                 <b><p>{this.props.oneSinglePhone.snippet}</p></b>
+                 <b><p>{this.props.player.snippet}</p></b>
 				  
                 </li>
                ) ;
          }
      }) ;
 	   
-       var FilteredPhoneList = React.createClass({
+       var FilteredPlayerList = React.createClass({
             render: function(){
                 var displayedPhones = this.props.phones.map(function(phone) {
-                  return <Phone key={phone.id} oneSinglePhone={phone} /> ;
+                  return <Phone key={phone.id} player={phone} /> ;
                 }) ;
                 return (
                         <div className="col-md-10">
@@ -76,7 +76,7 @@
             }
         });
 
-    var PhoneCatalogueApp = React.createClass({
+    var PlayerCatalogueApp = React.createClass({
 		getInitialState: function() {
            return { search: '', sort: 'name' } ;
       },
@@ -101,7 +101,7 @@
                     <SelectBox onUserInput={this.handleChange } 
                            filterText={this.state.search} 
                            sort={this.state.sort} />
-                     <FilteredPhoneList phones={filteredList} />
+                     <FilteredPlayerList phones={filteredList} />
                 </div> 
                 </div>                   
               </div>
@@ -110,4 +110,4 @@
       }
   });
 
-    export default PhoneCatalogueApp;
+    export default PlayerCatalogueApp;
