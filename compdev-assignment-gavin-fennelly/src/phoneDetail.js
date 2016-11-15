@@ -17,7 +17,14 @@
           var display = (
               <div>
                  <ul className="specs">
+				 <p>
+				<u> <b> <h2> Player Profile </h2> </b> </u>
+				
+				</p>
+				 
                   <li >
+				  
+				  
                    <h4> <span><u><b>Age:</b></u></span></h4>
                     <dl>
                      
@@ -77,6 +84,7 @@
             var thumbImages = this.props.phone.images.map(function(img,index) {
               return (
                   <li>
+				  
                    <img key={index} src={"/phoneSpecs/" + img}
                        alt="missing" />
                 </li>
@@ -85,21 +93,24 @@
 				
             var mainImage = (
               <div className="phone-images">
-              <img src={"/phoneSpecs/" + this.props.phone.images[0]} 
-                    alt={this.props.phone.name}
-                    className="phone" />
+             
+                   
+                   
             </div>
             ) ;
 			
               return (
                   <div>
                    {mainImage}
-                   <h1>{this.props.phone.name}</h1>
-                   <p>{this.props.phone.description}</p>
+                   <h2><i>{this.props.phone.name}</i></h2>
+                   <p>{this.props.phone.description}</p> 
+				   
                    <ul className="phone-thumbs">
                        {thumbImages}
+					   
                    </ul>
                   </div>
+				  
                   );
           }
     })
@@ -135,7 +146,7 @@ var display;
              }
 			 else
 			 {
-			display = <p>No phone details</p> ; 
+			display = <p>No player details available </p> ; 
 			 }
 			 
             return (

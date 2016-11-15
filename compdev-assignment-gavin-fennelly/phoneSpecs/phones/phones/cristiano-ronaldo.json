@@ -10,11 +10,12 @@
     "position": {
         "standbyTime": "", 
         "talkTime": "", 
-        "type": "Left Wingers"
+        "type": "Left Winger"
     }, 
    
    
-    "description": "Ronaldo lad information, some baller tbh", 
+   
+    "description": "Possibily the best player that has ever lived, Cristiano is definitely Madrids most valuable player and is a freekick spealist.", 
 	
     "display": {
         "screenResolution": "WVGA (800 x 480)", 
@@ -23,13 +24,13 @@
     }, 
     
     
-    "id": "dell-streak-7", 
+    "id": "Cristiano-Ronaldo", 
     "images": [
-        "img/phones/dell-streak-7.0.jpg", 
-        "img/phones/dell-streak-7.1.jpg", 
-        "img/phones/dell-streak-7.2.jpg", 
-        "img/phones/dell-streak-7.3.jpg", 
-        "img/phones/dell-streak-7.4.jpg"
+        "img/phones/cristiano-ronaldo1.jpg",
+        "img/phones/cristiano-ronaldo2.jpg", 
+        "img/phones/cristiano-ronaldo3.jpg"
+        
+
     ], 
     "name": "Cristiano Ronaldo", 
     "sizeAndWeight": {

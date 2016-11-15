@@ -14,19 +14,18 @@
                 "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
             }, 
             {
-                "age": 2, 
-                "carrier": "AT&amp;T", 
-                "id": "motorola-atrix-4g", 
+                "age": 27, 
+                "id": "gareth-bale", 
                 "imageUrl": "gareth-bale.jpg", 
                 "name": "Gareth Bale", 
                 "snippet": "Gareth Bale play as right winger for Real Madrid and cost them 100 million in 2014 which made him the most expensive player in the world. He has also be nominated as Wales player of the year for the last four years in a row"
             }, 
             {
                 "age": 3, 
-                "id": "dell-streak-7", 
+                "id": "cristiano-ronaldo", 
                 "imageUrl": "cristiano-ronaldo.jpg", 
                 "name": "Cristiano Ronaldo", 
-                "snippet": "Ronaldo is 3 time best player in the world and players as a left winger for Real Madrid in the Spanish League"
+                "snippet": "Ronaldo is 3 time best player in the world and plays as a left winger for Real Madrid in the Spanish League"
             }, 
             {
                 "age": 4, 
@@ -78,7 +77,7 @@
             {
                 "age": 10, 
                 "carrier": "Verizon", 
-                "id": "droid-2-global-by-motorola", 
+                "id": "toni-kroos", 
                 "imageUrl": "toni-kroos.jpg", 
                 "name": "Toni Kroos", 
                 "snippet": "Toni Kroos plays as a central defensive midfilder for Real Madrid and also plays for Germany in the same position. He signed for Madrid in 2014 and has been in the starting eleven ever since playing a big part in Madrids success."
