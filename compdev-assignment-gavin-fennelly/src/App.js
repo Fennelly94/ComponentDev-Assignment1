@@ -1,6 +1,6 @@
     import React from 'react';
 	import _ from 'lodash';
-	{/* import './App.css' */}
+	import './App.css';
 	import Phones from  './Data';
 	import { Link } from 'react-router'; 
 
@@ -17,8 +17,6 @@
       },
       render: function(){
           return (
-		  
-		  
                 <div className="col-md-10">
 				<p><b><u>Enter a players name here: </u></b></p>
                <input type="text" placeholder="Type here to search..." 
@@ -45,12 +43,15 @@
 		   
                 <li className="thumbnail phone-listing">
 				
-                  <Link to={'/phones/' + this.props.player.id} className="thumb">
+                  <Link to={'/phones/' + this.props.player.id} className="thumb"></Link>
 				  
 				  
-				  <h2><Link to={'/phones/' + this.props.player.id}> {this.props.player.name} <u><p><h4> Additionl info </h4></p></u></Link></h2>
+				  <h2><Link to={'/phones/' + this.props.player.id}> {this.props.player.name} <u><p><h4> Additional info </h4></p></u></Link></h2>
+				  
+				 
+
                   
-				  <img src={"/phoneSpecs/img/images/images/phones/" + this.props.player.imageUrl} alt={this.props.player.name} /> </Link>
+				  <Link to={'/phones/' + this.props.player.id} className="thumb2"><img src={"/phoneSpecs/img/images/images/phones/" + this.props.player.imageUrl} alt={this.props.player.name}  /> </Link>
 				  
                <u> <b> <h2> Player info: </h2></b></u>
 				  
@@ -60,6 +61,8 @@
                ) ;
          }
      }) ;
+	 
+	 
 	   
        var FilteredPlayerList = React.createClass({
             render: function(){

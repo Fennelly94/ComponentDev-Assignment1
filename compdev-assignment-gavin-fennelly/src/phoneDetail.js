@@ -1,5 +1,7 @@
     import React from 'react';
-    import request from 'superagent' ; 
+    import request from 'superagent' ;
+	import api from './test/stubAPI';
+	import { Link } from 'react-router';
 
   var Specification = React.createClass({
       render: function(){
@@ -65,17 +67,134 @@
                     <h4><span><u><b>Nationality</b></u></span></h4>
                     <dd>{phone.nationality}</dd>
                   </li>              
-                  </ul>            
+                  </ul>  
+          
             </div>
            )
             return (
                  <div>
                   {display}
+
               </div>
              );
       }
   });
 
+  var Form = React.createClass({
+
+       getInitialState: function() {
+           return { query: '', subject: ''};
+        },
+		
+       handleQueryChange: function(e) {
+           this.setState({query: e.target.value});
+       },
+	   
+       handleSubjectChange: function(e) {
+           this.setState({subject: e.target.value});
+       },
+	   
+	    handleSubmit: function(e) { {/* submit is the add button! */}
+        e.preventDefault();
+        var query = this.state.query.trim();
+        var subject = this.state.subject.trim();
+        if (!query ) {
+          return;
+        }
+        this.props.addHandler(query,subject);
+        this.setState({query: '', subject: ''});
+       }, 
+  
+  render : function() {
+           return (
+		   
+             <form style={{marginTop: '30px'}}>
+			 
+                <u><b><h3>Ask the Real Madrid player a question?</h3></b></u>
+				
+				<p>
+				
+				</p>
+				
+				
+                <div className="form-group">
+				
+                  <input type="text" className="form-control" placeholder="What kind of topic is your question?" value={this.state.query} onChange={this.handleQueryChange}>
+				  
+				  </input>
+				</div>
+                <div className="form-group">
+                  <input type="text" className="form-control" placeholder="What do you want to ask?" value={this.state.subject} onChange={this.handleSubjectChange}>
+				  </input>  
+                </div>
+                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit Question</button>
+				
+              </form>
+			  
+			    );
+			
+          }
+		  
+       });
+  
+   var QuestionItem = React.createClass({
+		
+			getInitialState : function() {
+               return {
+				   
+                status : '',
+                query: this.props.question.query,
+                subject: this.props.question.subjectaddress,
+               } ;
+            },
+		
+        render : function() {
+			
+            var lineStyle = {
+                 fontSize: '20px', marginLeft: '10px'  };
+            var cursor = { cursor: 'pointer' } ;
+
+			var line ;
+			
+               line = <span >
+			     
+			   <dl>
+			   <dt>{this.props.question.subject}</dt>
+			   {this.props.question.query}
+			   </dl>
+			   
+			   <br></br>
+
+			   </span>;
+			   
+            return (
+              <div >
+			  
+			   <span style={lineStyle} >{line}<span>
+  
+                  </span>
+                </span>
+
+              </div>  
+        );
+        }
+       }) ;
+	   
+	  var QuestionsList = React.createClass({
+        render : function() {
+			
+          var items = this.props.questions.map(function(question,index) {
+             return <QuestionItem key={index} question={question} 
+						addHandler={this.props.addHandler} /> ;
+            }.bind(this) )
+          return (
+            <div>
+			     <Link to={'/commentPage/'}>Comments</Link>
+                  {items}
+                  </div>
+            );
+        }
+    }) ; 
 	
     var ImagesSection = React.createClass({
 		
@@ -84,7 +203,6 @@
             var thumbImages = this.props.phone.images.map(function(img,index) {
               return (
                   <li>
-				  
                    <img key={index} src={"/phoneSpecs/" + img}
                        alt="missing" />
                 </li>
@@ -121,10 +239,20 @@
            return { phone: null };
        },
 	   
-       componentDidMount: function() {
+	    addQuestion : function(t,l) {
+            if (api.add(t,l)) {
+             this.setState({});
+			}
+          },
+	   
+      componentDidMount: function() {
+		   
+		   var url = '/phoneSpecs/phones/phones/' + this.props.params.id + '.json';
+		   console.log(url);   
           request.get(
-             '/phoneSpecs/phones/phones/' + this.props.params.id + '.json', function(err, res) {
-                 var json = JSON.parse(res.text);
+             url, function(err, res) {
+                 window.resp = res;
+				 var json = JSON.parse(res.text);
                 if (this.isMounted()) {
                     this.setState({ phone : json});
           }
@@ -132,8 +260,14 @@
       } ,
 	  
       render: function(){
-console.log(phone);
+		  
+		   var questions = _.sortBy(api.getAll(), function(question) {
+         return - question;
+             }
+          );
+		  
 var display;
+
             var phone = this.state.phone ;
           if (phone)
 		  {
@@ -151,7 +285,11 @@ var display;
 			 
             return (
                 <div>
-              {display}
+				
+               {display}
+			   
+			 <QuestionsList questions={questions} />
+            <li> <Form addHandler={this.addQuestion}  /> </li>
             </div>
             );
       }
