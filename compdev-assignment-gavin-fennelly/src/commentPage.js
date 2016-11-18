@@ -5,6 +5,63 @@
 
 
 
+  var Form = React.createClass({
+
+       getInitialState: function() {
+           return { query: '', subject: ''};
+        },
+		
+       handleQueryChange: function(e) {
+           this.setState({query: e.target.value});
+       },
+	   
+       handleSubjectChange: function(e) {
+           this.setState({subject: e.target.value});
+       },
+	   
+	    handleSubmit: function(e) { {/* submit is the add button! */}
+        e.preventDefault();
+        var query = this.state.query.trim();
+        var subject = this.state.subject.trim();
+        if (!query ) {
+          return;
+        }
+        this.props.addHandler(query,subject);
+        this.setState({query: '', subject: ''});
+       }, 
+  
+  render : function() {
+           return (
+		   
+             <form style={{marginTop: '30px'}}>
+			 
+                <u><b><h3>Ask the Real Madrid player a question?</h3></b></u>
+				
+				<p>
+				
+				</p>
+				
+				
+                <div className="form-group">
+				
+                  <input type="text" className="form-control" placeholder="What kind of topic is your question?" value={this.state.query} onChange={this.handleQueryChange}>
+				  
+				  </input>
+				</div>
+                <div className="form-group">
+                  <input type="text" className="form-control" placeholder="What do you want to ask?" value={this.state.subject} onChange={this.handleSubjectChange}>
+				  </input>  
+                </div>
+                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit Question</button>
+				
+              </form>
+			  
+			    );
+			
+          }
+		  
+       });
+  
    var QuestionItem = React.createClass({
 		
 			getInitialState : function() {
@@ -64,5 +121,103 @@
         }
     }) ; 
 	
+    var ImagesSection = React.createClass({
+		
+      render: function(){
+		  
+            var thumbImages = this.props.phone.images.map(function(img,index) {
+              return (
+                  <li>
+                   <img key={index} src={"/phoneSpecs/" + img}
+                       alt="missing" />
+                </li>
+                ) ;
+                } );
+				
+            var mainImage = (
+              <div className="phone-images">
+             
+                   
+                   
+            </div>
+            ) ;
+			
+              return (
+                  <div>
+                   {mainImage}
+                   <h2><i>{this.props.phone.name}</i></h2>
+                   <p>{this.props.phone.description}</p> 
+				   
+                   <ul className="phone-thumbs">
+                       {thumbImages}
+					   
+                   </ul>
+                  </div>
+				  
+                  );
+          }
+    })
 
-   
+    var PhoneDetail = React.createClass({
+		
+       getInitialState: function() {
+           return { phone: null };
+       },
+	   
+	    addQuestion : function(t,l) {
+            if (api.add(t,l)) {
+             this.setState({});
+			}
+          },
+	   
+      componentDidMount: function() {
+		   
+		   var url = '/phoneSpecs/phones/phones/' + this.props.params.id + '.json';
+		   console.log(url);   
+          request.get(
+             url, function(err, res) {
+                 window.resp = res;
+				 var json = JSON.parse(res.text);
+                if (this.isMounted()) {
+                    this.setState({ phone : json});
+          }
+        }.bind(this));
+      } ,
+	  
+      render: function(){
+		  
+		   var questions = _.sortBy(api.getAll(), function(question) {
+         return - question;
+             }
+          );
+		  
+var display;
+
+            var phone = this.state.phone ;
+          if (phone)
+		  {
+           display =  (
+                <div>
+                   <ImagesSection phone={phone} />
+                   <Specification  phone={phone} />       
+                </div>
+                ) ;
+             }
+			 else
+			 {
+			display = <p></p> ; 
+			 }
+			 
+            return (
+                <div>
+				
+               {display}
+			   
+			 <QuestionsList questions={questions} />
+            <li> <Form addHandler={this.addQuestion}  /> </li>
+            </div>
+            );
+      }
+    });
+
+    export default PhoneDetail;

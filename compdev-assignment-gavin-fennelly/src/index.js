@@ -22,7 +22,7 @@
       render : function() {
         return (
           <div>
-            <h1><b>Comment Page</b></h1>
+            <h2><b>Real Madrid Comment Page</b></h2>
 			<p> </p>
             {this.props.children}
           </div>

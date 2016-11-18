@@ -68,7 +68,7 @@
                     <dd>{phone.nationality}</dd>
                   </li>              
                   </ul>  
-          
+          <Link to={'/commentPage/'}>Comments</Link>
             </div>
            )
             return (
@@ -80,122 +80,7 @@
       }
   });
 
-  var Form = React.createClass({
-
-       getInitialState: function() {
-           return { query: '', subject: ''};
-        },
-		
-       handleQueryChange: function(e) {
-           this.setState({query: e.target.value});
-       },
-	   
-       handleSubjectChange: function(e) {
-           this.setState({subject: e.target.value});
-       },
-	   
-	    handleSubmit: function(e) { {/* submit is the add button! */}
-        e.preventDefault();
-        var query = this.state.query.trim();
-        var subject = this.state.subject.trim();
-        if (!query ) {
-          return;
-        }
-        this.props.addHandler(query,subject);
-        this.setState({query: '', subject: ''});
-       }, 
-  
-  render : function() {
-           return (
-		   
-             <form style={{marginTop: '30px'}}>
-			 
-                <u><b><h3>Ask the Real Madrid player a question?</h3></b></u>
-				
-				<p>
-				
-				</p>
-				
-				
-                <div className="form-group">
-				
-                  <input type="text" className="form-control" placeholder="What kind of topic is your question?" value={this.state.query} onChange={this.handleQueryChange}>
-				  
-				  </input>
-				</div>
-                <div className="form-group">
-                  <input type="text" className="form-control" placeholder="What do you want to ask?" value={this.state.subject} onChange={this.handleSubjectChange}>
-				  </input>  
-                </div>
-                <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit Question</button>
-				
-              </form>
-			  
-			    );
-			
-          }
-		  
-       });
-  
-   var QuestionItem = React.createClass({
-		
-			getInitialState : function() {
-               return {
-				   
-                status : '',
-                query: this.props.question.query,
-                subject: this.props.question.subjectaddress,
-               } ;
-            },
-		
-        render : function() {
-			
-            var lineStyle = {
-                 fontSize: '20px', marginLeft: '10px'  };
-            var cursor = { cursor: 'pointer' } ;
-
-			var line ;
-			
-               line = <span >
-			     
-			   <dl>
-			   <dt>{this.props.question.subject}</dt>
-			   {this.props.question.query}
-			   </dl>
-			   
-			   <br></br>
-
-			   </span>;
-			   
-            return (
-              <div >
-			  
-			   <span style={lineStyle} >{line}<span>
-  
-                  </span>
-                </span>
-
-              </div>  
-        );
-        }
-       }) ;
-	   
-	  var QuestionsList = React.createClass({
-        render : function() {
-			
-          var items = this.props.questions.map(function(question,index) {
-             return <QuestionItem key={index} question={question} 
-						addHandler={this.props.addHandler} /> ;
-            }.bind(this) )
-          return (
-            <div>
-			     <Link to={'/commentPage/'}>Comments</Link>
-                  {items}
-                  </div>
-            );
-        }
-    }) ; 
-	
+ 
     var ImagesSection = React.createClass({
 		
       render: function(){
@@ -239,11 +124,6 @@
            return { phone: null };
        },
 	   
-	    addQuestion : function(t,l) {
-            if (api.add(t,l)) {
-             this.setState({});
-			}
-          },
 	   
       componentDidMount: function() {
 		   
@@ -259,12 +139,7 @@
         }.bind(this));
       } ,
 	  
-      render: function(){
-		  
-		   var questions = _.sortBy(api.getAll(), function(question) {
-         return - question;
-             }
-          );
+     render: function(){
 		  
 var display;
 
@@ -280,7 +155,7 @@ var display;
              }
 			 else
 			 {
-			display = <p>No player details available </p> ; 
+			display = <p> no player details</p> ; 
 			 }
 			 
             return (
@@ -288,11 +163,11 @@ var display;
 				
                {display}
 			   
-			 <QuestionsList questions={questions} />
-            <li> <Form addHandler={this.addQuestion}  /> </li>
+			
             </div>
             );
       }
     });
 
     export default PhoneDetail;
+	

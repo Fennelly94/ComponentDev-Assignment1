@@ -24,7 +24,9 @@
     }, 
     
     
-    "id": "karim-benzema", 
+    "id": [
+	"karim-benzema"
+	], 
     "images": [
         "img/phones/karim-benzema1.jpg",
         "img/phones/karim-benzema2.jpg", 
