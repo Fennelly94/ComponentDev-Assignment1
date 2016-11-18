@@ -44,12 +44,12 @@
 				
                 <div className="form-group">
 				
-                  <input type="text" className="form-control" placeholder="What kind of topic is your question?" value={this.state.query} onChange={this.handleQueryChange}>
+                  <input type="text" className="form-control" placeholder="Enter your question here?" value={this.state.query} onChange={this.handleQueryChange}>
 				  
 				  </input>
 				</div>
                 <div className="form-group">
-                  <input type="text" className="form-control" placeholder="What do you want to ask?" value={this.state.subject} onChange={this.handleSubjectChange}>
+                  <input type="text" className="form-control" placeholder="Enter your name here?" value={this.state.subject} onChange={this.handleSubjectChange}>
 				  </input>  
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit Question</button>
@@ -113,8 +113,15 @@
 						addHandler={this.props.addHandler} /> ;
             }.bind(this) )
           return (
+		  
+		  
             <div>
-			     <Link to={'/commentPage/'}>Comments</Link>
+			<br>
+			</br>
+			  
+				 <b><u><Link to={'/players/'}>Go back to players list.</Link></u></b>
+				 
+				 
                   {items}
                   </div>
             );
@@ -128,14 +135,14 @@
             var thumbImages = this.props.phone.images.map(function(img,index) {
               return (
                   <li>
-                   <img key={index} src={"/phoneSpecs/" + img}
+                   <img key={index} src={"/playerSpecs/" + img}
                        alt="missing" />
                 </li>
                 ) ;
                 } );
 				
             var mainImage = (
-              <div className="phone-images">
+              <div className="player-images">
              
                    
                    
@@ -148,7 +155,7 @@
                    <h2><i>{this.props.phone.name}</i></h2>
                    <p>{this.props.phone.description}</p> 
 				   
-                   <ul className="phone-thumbs">
+                   <ul className="player-thumbs">
                        {thumbImages}
 					   
                    </ul>
@@ -172,7 +179,7 @@
 	   
       componentDidMount: function() {
 		   
-		   var url = '/phoneSpecs/phones/phones/' + this.props.params.id + '.json';
+		   var url = '/playerSpecs/players/players/' + this.props.params.id + '.json';
 		   console.log(url);   
           request.get(
              url, function(err, res) {
@@ -220,4 +227,5 @@ var display;
       }
     });
 
+	
     export default PhoneDetail;

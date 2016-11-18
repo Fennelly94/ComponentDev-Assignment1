@@ -3,6 +3,7 @@
 	import './App.css';
 	import Phones from  './Data';
 	import { Link } from 'react-router'; 
+	
 
   var SelectBox = React.createClass({
       handleChange : function(e, type,value) {
@@ -41,17 +42,17 @@
 		  
            return (
 		   
-                <li className="thumbnail phone-listing">
+                <li className="thumbnail player-listing">
 				
-                  <Link to={'/phones/' + this.props.player.id} className="thumb"></Link>
+                  <Link to={'/players/' + this.props.player.id} className="thumb"></Link>
 				  
 				  
-				  <h2><Link to={'/phones/' + this.props.player.id}> {this.props.player.name} <u><p><h4> Additional info </h4></p></u></Link></h2>
+				  <h2><Link to={'/players/' + this.props.player.id}> {this.props.player.name} <u><p><h4> Additional info </h4></p></u></Link></h2>
 				  
 				 
 
                   
-				  <Link to={'/phones/' + this.props.player.id} className="thumb2"><img src={"/phoneSpecs/img/images/images/phones/" + this.props.player.imageUrl} alt={this.props.player.name}  /> </Link>
+				  <Link to={'/players/' + this.props.player.id} className="thumb2"><img src={"/playerSpecs/img/images/images/players/" + this.props.player.imageUrl} alt={this.props.player.name}  /> </Link>
 				  
                <u> <b> <h2> Player info: </h2></b></u>
 				  
@@ -71,7 +72,7 @@
                 }) ;
                 return (
                         <div className="col-md-10">
-                          <ul className="phones">
+                          <ul className="players">
                               {displayedPhones}
                           </ul>
                         </div>

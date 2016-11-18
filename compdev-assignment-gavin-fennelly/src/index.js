@@ -6,6 +6,7 @@
 	import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 	import PhoneDetail from './phoneDetail';
 	import Phones from  './Data';
+	import './index.css';
 	
 	var App = React.createClass({
       render : function() {
@@ -22,7 +23,7 @@
       render : function() {
         return (
           <div>
-            <h2><b>Real Madrid Comment Page</b></h2>
+            <h2><b>Real Madrid Fan Community Questions Page</b></h2>
 			<p> </p>
             {this.props.children}
           </div>
@@ -36,12 +37,12 @@
 	
 	<Route path="/" component={App}>
 	<IndexRoute component={PlayerCatalogueApp} />
-	<Route path="phones/:id" component={PhoneDetail} />
+	<Route path="players/:id" component={PhoneDetail} />
 	</Route>
 	
-	<Route path="/phones/" component={App}>
+	<Route path="/players/" component={App}>
 	<IndexRoute component={PlayerCatalogueApp} />
-	<Route path="/phones/" />
+	<Route path="/players/" />
 	</Route>
 	
 	<Route path="/commentPage/" component={Comment}>

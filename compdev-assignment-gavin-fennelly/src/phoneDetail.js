@@ -20,7 +20,7 @@
               <div>
                  <ul className="specs">
 				 <p>
-				<u> <b> <h2> Player Profile </h2> </b> </u>
+				<u> <b> <h2> Player Profile: </h2> </b> </u>
 				
 				</p>
 				 
@@ -35,7 +35,7 @@
                   </li>
 				  
                   <li>
-                    <h4><span><u><b>Position</b></u></span></h4>
+                    <h4><span><u><b>Position:</b></u></span></h4>
                     <dl>
                    
                       <dd>{phone.position.type}</dd>
@@ -45,16 +45,16 @@
                  
                   
                   <li>
-                    <h4><span><u><b>Career Goals</b></u></span></h4>
+                    <h4><span><u><b>Career Goals:</b></u></span></h4>
                     <dl>
-                      <dt>Real Madrid Goals</dt>
+                      <dt>Real Madrid Goals:</dt>
                       <dd>{phone.goals.realmadridgoals}</dd>
-                      <dt>International Goals</dt>
+                      <dt>International Goals:</dt>
                       <dd>{phone.goals.internationalgoals}</dd>
                     </dl>
                   </li>
                   <li>
-                    <h4><span><u><b>Height and Weight</b></u></span></h4>
+                    <h4><span><u><b>Height and Weight:</b></u></span></h4>
                     <dl>
                     
                           {dimensions}
@@ -64,11 +64,16 @@
                  
                   
                   <li>
-                    <h4><span><u><b>Nationality</b></u></span></h4>
+                    <h4><span><u><b>Nationality:</b></u></span></h4>
                     <dd>{phone.nationality}</dd>
                   </li>              
                   </ul>  
-          <Link to={'/commentPage/'}>Comments</Link>
+				  
+				  <h4><u><b> Click the link below to go to the Real Madrid fan community questions page: </b></u></h4>
+			<li>	  
+          <u><b><Link to={'/commentPage/'}>Questions Page (link) </Link></b></u>
+		  
+		  </li>
             </div>
            )
             return (
@@ -88,14 +93,14 @@
             var thumbImages = this.props.phone.images.map(function(img,index) {
               return (
                   <li>
-                   <img key={index} src={"/phoneSpecs/" + img}
+                   <img key={index} src={"/playerSpecs/" + img}
                        alt="missing" />
                 </li>
                 ) ;
                 } );
 				
             var mainImage = (
-              <div className="phone-images">
+              <div className="player-images">
              
                    
                    
@@ -108,7 +113,7 @@
                    <h2><i>{this.props.phone.name}</i></h2>
                    <p>{this.props.phone.description}</p> 
 				   
-                   <ul className="phone-thumbs">
+                   <ul className="player-thumbs">
                        {thumbImages}
 					   
                    </ul>
@@ -127,7 +132,7 @@
 	   
       componentDidMount: function() {
 		   
-		   var url = '/phoneSpecs/phones/phones/' + this.props.params.id + '.json';
+		   var url = '/playerSpecs/players/players/' + this.props.params.id + '.json';
 		   console.log(url);   
           request.get(
              url, function(err, res) {
