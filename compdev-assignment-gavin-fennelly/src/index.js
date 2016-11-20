@@ -12,7 +12,8 @@
       render : function() {
         return (
           <div>
-            <h1><b>Current Real Madrid Football Squad</b></h1>
+            <h1><b>Real Madrid Football Team</b></h1>
+			
 			<p> </p>
             {this.props.children}
           </div>
@@ -24,6 +25,9 @@
         return (
           <div>
             <h2><b>Real Madrid Fan Community Questions Page</b></h2>
+			
+			
+			
 			<p> </p>
             {this.props.children}
           </div>

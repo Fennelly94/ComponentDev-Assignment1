@@ -4,6 +4,7 @@
 	import Phones from  './Data';
 	import { Link } from 'react-router'; 
 	
+	
 
   var SelectBox = React.createClass({
       handleChange : function(e, type,value) {
@@ -18,7 +19,13 @@
       },
       render: function(){
           return (
+		  
+		  
                 <div className="col-md-10">
+				
+				 <h4> Click below to buy tickets to see Real Madrid play! </h4>
+					<p> <u><b><a href="http://www.realmadrid.com/en/tickets">Real Madrid Tickets!</a></b></u>
+					</p>
 				<p><b><u>Enter a players name here: </u></b></p>
                <input type="text" placeholder="Type here to search..." 
                           value={this.props.filterText}
@@ -31,10 +38,19 @@
                        <option value="name">Alphabetical</option>
                        <option value="age">Youngest First</option>
                      </select>
+					 
+					 <p>
+					 </p>
+					 
+					 
+					
              </div>
                );
           }
        });
+	   
+	   
+	   
 	   
 	var Phone = React.createClass({
 		
@@ -54,7 +70,7 @@
                   
 				  <Link to={'/players/' + this.props.player.id} className="thumb2"><img src={"/playerSpecs/img/images/images/players/" + this.props.player.imageUrl} alt={this.props.player.name}  /> </Link>
 				  
-               <u> <b> <h2> Player info: </h2></b></u>
+                <b> <h2> Player info: </h2></b>
 				  
                  <b><p>{this.props.player.snippet}</p></b>
 				  

@@ -119,7 +119,12 @@
 			<br>
 			</br>
 			  
-				 <b><u><Link to={'/players/'}>Go back to players list.</Link></u></b>
+				 <b><u><Link to={'/players/'}>Go back to home page.</Link></u></b>
+				 
+				 
+	
+
+
 				 
 				 
                   {items}

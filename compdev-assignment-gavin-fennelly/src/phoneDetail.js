@@ -20,7 +20,7 @@
               <div>
                  <ul className="specs">
 				 <p>
-				<u> <b> <h2> Player Profile: </h2> </b> </u>
+				<b> <h2> Player Profile: </h2> </b>
 				
 				</p>
 				 
