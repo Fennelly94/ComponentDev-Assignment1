@@ -5,13 +5,13 @@
 
   var Specification = React.createClass({
       render: function(){
-            var phone = this.props.phone ;             
-            var age = phone.age.map(function(avb,index) {
+            var player = this.props.player ;             
+            var age = player.age.map(function(avb,index) {
               return (
                        <dd key={index}>{avb}</dd>
                      ) ;
                 }) ;
-            var dimensions = phone.sizeAndWeight.dimensions.map(function(dim,index) {
+            var dimensions = player.sizeAndWeight.dimensions.map(function(dim,index) {
               return (
                         <dd key={index}>{dim}</dd>
                      ) ;
@@ -38,7 +38,7 @@
                     <h4><span><u><b>Position:</b></u></span></h4>
                     <dl>
                    
-                      <dd>{phone.position.type}</dd>
+                      <dd>{player.position.type}</dd>
                     
                     </dl>
                   </li>    
@@ -48,9 +48,9 @@
                     <h4><span><u><b>Career Goals:</b></u></span></h4>
                     <dl>
                       <dt>Real Madrid Goals:</dt>
-                      <dd>{phone.goals.realmadridgoals}</dd>
+                      <dd>{player.goals.realmadridgoals}</dd>
                       <dt>International Goals:</dt>
-                      <dd>{phone.goals.internationalgoals}</dd>
+                      <dd>{player.goals.internationalgoals}</dd>
                     </dl>
                   </li>
                   <li>
@@ -65,7 +65,7 @@
                   
                   <li>
                     <h4><span><u><b>Nationality:</b></u></span></h4>
-                    <dd>{phone.nationality}</dd>
+                    <dd>{player.nationality}</dd>
                   </li>              
                   </ul>  
 				  
@@ -90,7 +90,7 @@
 		
       render: function(){
 		  
-            var thumbImages = this.props.phone.images.map(function(img,index) {
+            var thumbImages = this.props.player.images.map(function(img,index) {
               return (
                   <li>
                    <img key={index} src={"/playerSpecs/" + img}
@@ -110,8 +110,8 @@
               return (
                   <div>
                    {mainImage}
-                   <h2><i>{this.props.phone.name}</i></h2>
-                   <p>{this.props.phone.description}</p> 
+                   <h2><i>{this.props.player.name}</i></h2>
+                   <p>{this.props.player.description}</p> 
 				   
                    <ul className="player-thumbs">
                        {thumbImages}
@@ -126,7 +126,7 @@
     var PhoneDetail = React.createClass({
 		
        getInitialState: function() {
-           return { phone: null };
+           return { player: null };
        },
 	   
 	   
@@ -139,7 +139,7 @@
                  window.resp = res;
 				 var json = JSON.parse(res.text);
                 if (this.isMounted()) {
-                    this.setState({ phone : json});
+                    this.setState({ player : json});
           }
         }.bind(this));
       } ,
@@ -148,13 +148,13 @@
 		  
 var display;
 
-            var phone = this.state.phone ;
-          if (phone)
+            var player = this.state.player ;
+          if (player)
 		  {
            display =  (
                 <div>
-                   <ImagesSection phone={phone} />
-                   <Specification  phone={phone} />       
+                   <ImagesSection player={player} />
+                   <Specification  player={player} />       
                 </div>
                 ) ;
              }

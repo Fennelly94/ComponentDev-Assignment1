@@ -26,6 +26,9 @@
 				 <h4> Click below to buy tickets to see Real Madrid play! </h4>
 					<p> <u><b><a href="http://www.realmadrid.com/en/tickets">Real Madrid Tickets!</a></b></u>
 					</p>
+					 <h4> Press on the link below to see the Madrid players in action last season! </h4>
+					<p> <u><b><a href="https://www.youtube.com/watch?v=8pXtRXavA2s">Last Season highlights!</a></b></u>
+					</p>
 				<p><b><u>Enter a players name here: </u></b></p>
                <input type="text" placeholder="Type here to search..." 
                           value={this.props.filterText}

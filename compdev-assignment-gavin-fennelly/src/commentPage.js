@@ -1,4 +1,4 @@
-    import React from 'react';
+     import React from 'react';
     import _ from 'lodash';
     import api from './test/stubAPI';
 	import { Link } from 'react-router'; 
@@ -35,7 +35,7 @@
 		   
              <form style={{marginTop: '30px'}}>
 			 
-                <u><b><h3>Ask the Real Madrid player a question?</h3></b></u>
+                <u><b><h3>Send a comment to the Real Madrid Fan Community Page here:</h3></b></u>
 				
 				<p>
 				
@@ -44,7 +44,7 @@
 				
                 <div className="form-group">
 				
-                  <input type="text" className="form-control" placeholder="Enter your question here?" value={this.state.query} onChange={this.handleQueryChange}>
+                  <input type="text" className="form-control" placeholder="Enter your comment here?" value={this.state.query} onChange={this.handleQueryChange}>
 				  
 				  </input>
 				</div>
