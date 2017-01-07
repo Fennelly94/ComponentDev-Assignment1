@@ -184,17 +184,18 @@
 	   
       componentDidMount: function() {
 		   
-		   var url = '/playerSpecs/players/players/' + this.props.params.id + '.json';
-		   console.log(url);   
-          request.get(
-             url, function(err, res) {
-                 window.resp = res;
-				 var json = JSON.parse(res.text);
-                if (this.isMounted()) {
-                    this.setState({ phone : json});
-          }
-        }.bind(this));
-      } ,
+		 request.get('http://0.0.0.0:4000/api/questions/' + this.props.params.questionId )
+          .end(function(error, res){
+            if (res) {
+              var json = JSON.parse(res.text);
+              localStorage.clear();
+              localStorage.setItem('question', JSON.stringify(json)) ;
+              this.setState( {}) ;                
+            } else {
+              console.log(error );
+            }
+          }.bind(this)); 
+      }, 
 	  
       render: function(){
 		  

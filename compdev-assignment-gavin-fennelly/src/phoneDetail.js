@@ -11,7 +11,8 @@
                        <dd key={index}>{avb}</dd>
                      ) ;
                 }) ;
-            var dimensions = player.sizeAndWeight.dimensions.map(function(dim,index) {
+            var dimensions = 
+player.sizeAndWeight.dimensions.map(function(dim,index) {
               return (
                         <dd key={index}>{dim}</dd>
                      ) ;
@@ -69,9 +70,11 @@
                   </li>              
                   </ul>  
 				  
-				  <h4><u><b> Click the link below to go to the Real Madrid fan community questions page: </b></u></h4>
+				  <h4><u><b> Click the link below to go to the Real 
+Madrid fan community comments page: </b></u></h4>
 			<li>	  
-          <u><b><Link to={'/commentPage/'}>Questions Page (link) </Link></b></u>
+          <u><b><Link to={'/commentPage/'}>Comments Page (link) 
+</Link></b></u>
 		  
 		  </li>
             </div>
@@ -90,7 +93,8 @@
 		
       render: function(){
 		  
-            var thumbImages = this.props.player.images.map(function(img,index) {
+            var thumbImages = 
+this.props.player.images.map(function(img,index) {
               return (
                   <li>
                    <img key={index} src={"/playerSpecs/" + img}
@@ -132,7 +136,8 @@
 	   
       componentDidMount: function() {
 		   
-		   var url = '/playerSpecs/players/players/' + this.props.params.id + '.json';
+		   var url = '/playerSpecs/players/players/' + 
+this.props.params.id + '.json';
 		   console.log(url);   
           request.get(
              url, function(err, res) {

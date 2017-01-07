@@ -1,4 +1,5 @@
-    import React from 'react';
+    import request from 'superagent' ; 
+   import React from 'react';
 	import _ from 'lodash';
 	import './App.css';
 	import Phones from  './Data';
@@ -100,6 +101,21 @@
         });
 
     var PlayerCatalogueApp = React.createClass({
+		
+ componentDidMount : function() {
+       request.get('http://0.0.0.0:4000/api/players')
+          .end(function(error, res){
+            if (res) {
+              var json = JSON.parse(res.text);
+              localStorage.clear();
+              localStorage.setItem('players', JSON.stringify(json)) ;
+              this.setState( {}) ;                
+            } else {
+              console.log(error );
+            }
+          }.bind(this)); 
+      },
+		
 		getInitialState: function() {
            return { search: '', sort: 'name' } ;
       },
@@ -111,6 +127,10 @@
           }
       }, 
            render: function(){
+			   
+			   var contacts = localStorage.getItem('players') ?
+              JSON.parse(localStorage.getItem('players')) : [] ;
+			  
                var list = Phones.filter(function(p) {
                       return p.name.toLowerCase().search(
                              this.state.search.toLowerCase() ) !== -1 ;
